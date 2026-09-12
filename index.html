@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -46,6 +47,9 @@
   .badge-student { background: linear-gradient(135deg, #0EA5E9, #06B6D4); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; }
   .badge-creator { background: linear-gradient(135deg, #F59E0B, #EC4899); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; }
   .badge-promo { background: #FEE2E2; color: #DC2626; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-urgent { background: linear-gradient(135deg, #EF4444, #DC2626); color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; animation: pulse 2s infinite; }
+  
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
   
   /* TOGGLE SWITCH */
   .toggle-switch { position: relative; display: inline-flex; background: var(--border); border-radius: 50px; padding: 4px; cursor: pointer; transition: all 0.3s; }
@@ -200,7 +204,10 @@
       <li><a href="#ulasan" class="hover:text-[var(--primary)] transition-colors">Testimoni</a></li>
     </ul>
     <div class="hidden md:flex items-center gap-3">
-      <a href="#beasiswa" class="px-4 py-2.5 rounded-xl border border-[var(--border)] text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all">Daftar Beasiswa</a>
+      <a href="https://wa.me/628883138856618?text=Halo%20License%20Creative%2C%20saya%20ingin%20bertanya%20tentang%20program%20beasiswa%20dan%20lisensi%20software" target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-300 text-sm font-semibold text-emerald-700 hover:bg-emerald-50 transition-all flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp"></i> Info WhatsApp
+      </a>
+      <a href="#beasiswa" class="px-4 py-2.5 rounded-xl border border-red-300 text-sm font-semibold text-red-700 hover:bg-red-50 transition-all badge-urgent">Daftar Beasiswa (143/150)</a>
       <a href="#katalog" class="px-4 py-2.5 rounded-xl btn-primary text-sm font-semibold shadow-sm transition-all">Beli Lisensi</a>
     </div>
     <button id="menuBtn" class="md:hidden text-2xl text-slate-700" aria-label="Buka menu">
@@ -212,9 +219,9 @@
 <!-- HERO -->
 <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-12 md:pt-20 pb-16 grid lg:grid-cols-12 gap-12 items-center">
   <div class="lg:col-span-7 animate-slideUp">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold mb-6">
-      <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-      Ekosistem Lengkap untuk Kreator Digital Indonesia
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-semibold mb-6">
+      <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+      ⚠️ Pendaftaran Beasiswa Ditutup Minggu 13 September 2026
     </div>
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight display leading-[1.15] text-slate-900">
       Lisensi Resmi, Belajar, & <span class="gradient-text">Beasiswa Kreatif</span>
@@ -222,12 +229,15 @@
     <p class="mt-6 text-lg text-[var(--text-muted)] max-w-xl leading-relaxed">
       Akses software legal terjangkau, platform pembelajaran langsung dari para profesional, dan beasiswa Rp 25 juta untuk talenta kreatif muda Indonesia.
     </p>
-    <div class="mt-8 flex flex-wrap items-center gap-4">
+    <div class="mt-8 flex flex-wrap items-center gap-3">
       <a href="#katalog" class="px-6 py-3.5 rounded-xl btn-primary font-semibold text-sm shadow-md shadow-blue-500/20 transition-all flex items-center gap-2">
         Jelajahi Katalog <i class="fa-solid fa-arrow-right text-xs"></i>
       </a>
-      <a href="#beasiswa" class="px-6 py-3.5 rounded-xl border border-[var(--border)] bg-white font-semibold text-sm text-slate-700 hover:bg-slate-50 transition-all">
-        Program Beasiswa
+      <a href="#beasiswa" class="px-6 py-3.5 rounded-xl border-2 border-red-600 bg-red-50 font-semibold text-sm text-red-700 hover:bg-red-100 transition-all animate-pulse">
+        🔥 Daftar Beasiswa (Kuota Terbatas)
+      </a>
+      <a href="https://wa.me/628883138856618?text=Halo%20License%20Creative%2C%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20platform%20Anda" target="_blank" class="px-6 py-3.5 rounded-xl border-2 border-emerald-500 bg-emerald-50 font-semibold text-sm text-emerald-700 hover:bg-emerald-100 transition-all flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Sekarang
       </a>
     </div>
     <div class="mt-12 pt-8 border-t border-[var(--border)] grid grid-cols-3 gap-6">
@@ -250,19 +260,35 @@
     <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-3xl p-8 card-shadow relative overflow-hidden border border-blue-400/20">
       <div class="absolute -right-12 -top-12 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
       <div class="absolute -left-8 bottom-0 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-      <div class="flex items-center justify-between relative z-10">
+      <div class="flex items-center justify-between relative z-10 mb-4">
         <span class="px-3 py-1 rounded-lg bg-white/15 text-white text-xs font-semibold border border-white/20">Edisi Premium</span>
-        <span class="text-xs text-white/70">Batch 2026</span>
+        <span class="badge-urgent">⏰ Segera!</span>
       </div>
-      <div class="mt-6 relative z-10">
+      <div class="relative z-10">
         <h3 class="font-bold text-2xl display">Beasiswa Portofolio Desain</h3>
         <p class="mt-3 text-sm text-white/90 leading-relaxed">
           Program beasiswa penuh untuk talenta desain grafis terbaik dengan dukungan biaya pendidikan hingga Rp 25.000.000.
         </p>
       </div>
-      <div class="mt-6 pt-6 border-t border-white/20 flex items-center justify-between text-xs relative z-10">
-        <span class="flex items-center gap-1.5 text-white/90"><i class="fa-solid fa-check-circle text-emerald-300"></i> 50 Penerima</span>
-        <a href="#beasiswa" class="text-blue-100 font-semibold hover:text-white transition-colors">Buka Pendaftaran →</a>
+      
+      <!-- PROGRESS QUOTA -->
+      <div class="mt-6 pt-6 border-t border-white/20 relative z-10">
+        <div class="mb-4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold text-white/90">Kuota Pendaftaran</span>
+            <span class="text-xs font-bold text-amber-300">143 dari 150</span>
+          </div>
+          <div class="w-full h-2.5 rounded-full bg-white/20">
+            <div class="h-full rounded-full bg-gradient-to-r from-amber-300 to-amber-400" style="width: 95.3%"></div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-xs text-white/70">Penutupan Pendaftaran</p>
+            <p class="text-sm font-bold text-red-300">🔴 Minggu, 13 Sep 2026</p>
+          </div>
+          <a href="#beasiswa" class="text-blue-100 font-semibold hover:text-white transition-colors text-sm flex items-center gap-1">Daftar Sekarang <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -360,635 +386,4 @@
 
       <!-- CARD KURSUS 4 -->
       <div class="bg-white rounded-2xl overflow-hidden card-shadow hover:shadow-lg transition-all">
-        <div class="h-40 bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-4xl">
-          <i class="fa-solid fa-briefcase"></i>
-        </div>
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-bold text-lg display text-slate-900">Membangun Portfolio Profesional</h3>
-            <span class="badge-creator">6 Jam</span>
-          </div>
-          <p class="text-sm text-[var(--text-muted)] leading-relaxed">Strategi lengkap membuat portfolio yang impressive untuk melamar kerja atau freelance. Bonus template siap pakai.</p>
-          <div class="mt-4 flex items-center gap-2 text-xs text-blue-600">
-            <i class="fa-solid fa-star text-amber-400"></i>
-            <span>4.9/5 (89 ulasan)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTA LEARNING -->
-    <div class="bg-white rounded-2xl p-8 text-center card-shadow border border-blue-200">
-      <h3 class="font-bold text-2xl display text-slate-900 mb-3">Sudah Membeli Lisensi?</h3>
-      <p class="text-slate-700 mb-6">Akses semua kursus gratis setelah pembelian software. Login untuk melihat progress belajarmu.</p>
-      <button class="px-6 py-3 rounded-xl btn-primary font-semibold text-sm shadow-md transition-all">
-        Login ke Learning Platform
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- BEASISWA -->
-<section id="beasiswa" class="bg-slate-900 text-white py-20">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-6">
-        <span class="text-amber-400 font-semibold text-xs tracking-wider uppercase">Program Beasiswa Rp 25.000.000</span>
-        <h2 class="text-3xl lg:text-4xl font-bold display mt-2 text-white">Jalur Beasiswa Portofolio Kreatif</h2>
-        <p class="text-slate-300 mt-4 text-base leading-relaxed">
-          Kami membuka kesempatan emas bagi desainer muda berbakat untuk mendapatkan beasiswa pendidikan hingga Rp 25 juta plus mentoring eksklusif dari profesional industri.
-        </p>
-        
-        <!-- BENEFIT CARDS -->
-        <div class="mt-8 space-y-3">
-          <div class="flex items-center gap-3 text-slate-200">
-            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-sm"></i>
-            </div>
-            <span>Beasiswa Pendidikan hingga Rp 25.000.000</span>
-          </div>
-          <div class="flex items-center gap-3 text-slate-200">
-            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-sm"></i>
-            </div>
-            <span>Akses Gratis Semua Software Premium</span>
-          </div>
-          <div class="flex items-center gap-3 text-slate-200">
-            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-sm"></i>
-            </div>
-            <span>Mentoring 1-on-1 dari Profesional</span>
-          </div>
-          <div class="flex items-center gap-3 text-slate-200">
-            <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-check text-sm"></i>
-            </div>
-            <span>Sertifikasi Desain Internasional</span>
-          </div>
-        </div>
-
-        <div class="mt-8 flex items-center gap-4">
-          <a href="#" onclick="openBeasiswaModal()" class="px-6 py-3.5 rounded-xl btn-primary font-semibold text-sm shadow-md transition-all inline-flex items-center gap-2">
-            Daftar Sekarang <i class="fa-solid fa-arrow-right text-xs"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="lg:col-span-6 grid sm:grid-cols-2 gap-4">
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-amber-500/40 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-base mb-4">1</div>
-          <h3 class="font-bold text-base display text-white">Beli Lisensi</h3>
-          <p class="text-sm text-slate-300 mt-2 leading-relaxed">Beli software dari katalog kami dengan harga spesial untuk student dan creator.</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-amber-500/40 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-base mb-4">2</div>
-          <h3 class="font-bold text-base display text-white">Kirim Portofolio</h3>
-          <p class="text-sm text-slate-300 mt-2 leading-relaxed">Upload karya desain terbaik Anda beserta esai motivasi dan CV lengkap.</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-amber-500/40 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-base mb-4">3</div>
-          <h3 class="font-bold text-base display text-white">Review Profesional</h3>
-          <p class="text-sm text-slate-300 mt-2 leading-relaxed">Tim kurator mengevaluasi orisinalitas, teknik, dan visi kreatif Anda secara menyeluruh.</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-amber-500/40 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-base mb-4">4</div>
-          <h3 class="font-bold text-base display text-white">Dapatkan Beasiswa</h3>
-          <p class="text-sm text-slate-300 mt-2 leading-relaxed">Penerima akan dihubungi untuk pengumuman resmi dan proses administrasi beasiswa.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODAL PRODUK DETAIL -->
-<div id="productModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-backdrop p-4">
-  <div class="bg-white rounded-3xl w-full max-w-md modal-content card-shadow border border-slate-100">
-    <button onclick="closeProductModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center transition-colors">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    
-    <div class="p-8">
-      <div id="modalProductIcon" class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"></div>
-      <h3 id="modalProductName" class="font-bold text-2xl display text-slate-900 mb-2"></h3>
-      <p id="modalProductDesc" class="text-sm text-slate-600 leading-relaxed mb-6"></p>
-
-      <!-- PRICING SECTION -->
-      <div class="bg-slate-50 rounded-2xl p-6 mb-6">
-        <p class="text-xs text-slate-600 font-semibold mb-3 uppercase tracking-wider">Harga</p>
-        
-        <div class="space-y-3">
-          <div class="flex items-end justify-between pb-3 border-b border-slate-200">
-            <div>
-              <p class="text-sm font-semibold text-slate-900 mb-1">Harga Student</p>
-              <p class="text-xs text-slate-600">Khusus pelajar & mahasiswa aktif</p>
-            </div>
-            <p id="modalStudentPrice" class="text-xl font-bold display text-blue-600"></p>
-          </div>
-          
-          <div class="flex items-end justify-between">
-            <div>
-              <p class="text-sm font-semibold text-slate-900 mb-1">Harga Creator</p>
-              <p class="text-xs text-slate-600">Untuk profesional & freelancer</p>
-            </div>
-            <p id="modalCreatorPrice" class="text-xl font-bold display text-amber-600"></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- USER TYPE SELECT -->
-      <p class="text-sm font-semibold text-slate-900 mb-3">Pilih Tipe Pembeli:</p>
-      <div class="flex gap-3 mb-6">
-        <button onclick="selectUserType('student')" class="flex-1 py-3 px-4 rounded-xl border-2 border-slate-200 font-semibold text-sm transition-all user-type-btn" data-type="student">
-          <i class="fa-solid fa-graduation-cap mr-2"></i> Student
-        </button>
-        <button onclick="selectUserType('creator')" class="flex-1 py-3 px-4 rounded-xl border-2 border-slate-200 font-semibold text-sm transition-all user-type-btn" data-type="creator">
-          <i class="fa-solid fa-briefcase mr-2"></i> Creator
-        </button>
-      </div>
-
-      <!-- PAYMENT METHODS -->
-      <p class="text-sm font-semibold text-slate-900 mb-3">Metode Pembayaran:</p>
-      <div class="space-y-2 mb-6">
-        <button onclick="proceedPayment('whatsapp')" class="w-full py-3 px-4 rounded-xl border border-slate-200 hover:bg-slate-50 flex items-center gap-3 font-semibold text-sm transition-all">
-          <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i>
-          <div class="text-left">
-            <p class="font-bold">WhatsApp</p>
-            <p class="text-xs text-slate-600">Chat langsung ke tim kami</p>
-          </div>
-        </button>
-        <button onclick="proceedPayment('telegram')" class="w-full py-3 px-4 rounded-xl border border-slate-200 hover:bg-slate-50 flex items-center gap-3 font-semibold text-sm transition-all">
-          <i class="fa-brands fa-telegram text-blue-600 text-lg"></i>
-          <div class="text-left">
-            <p class="font-bold">Telegram</p>
-            <p class="text-xs text-slate-600">Konfirmasi cepat via bot</p>
-          </div>
-        </button>
-        <button onclick="proceedPayment('form')" class="w-full py-3 px-4 rounded-xl border border-slate-200 hover:bg-slate-50 flex items-center gap-3 font-semibold text-sm transition-all">
-          <i class="fa-solid fa-file-lines text-blue-600 text-lg"></i>
-          <div class="text-left">
-            <p class="font-bold">Isi Formulir</p>
-            <p class="text-xs text-slate-600">Data & pembayaran di sini</p>
-          </div>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL STUDENT VERIFICATION -->
-<div id="studentVerificationModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-backdrop p-4">
-  <div class="bg-white rounded-3xl w-full max-w-md modal-content card-shadow border border-slate-100 p-8">
-    <button onclick="closeAllModals()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center transition-colors">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-
-    <div class="mb-6">
-      <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">
-        <i class="fa-solid fa-graduation-cap"></i>
-      </div>
-      <h3 class="font-bold text-2xl display text-slate-900">Verifikasi Status Student</h3>
-      <p class="text-sm text-slate-600 mt-2">Isi data diri lengkap untuk mendapatkan harga spesial student</p>
-    </div>
-
-    <form id="studentForm" onsubmit="handleStudentSubmit(event)" class="space-y-4">
-      <div>
-        <label class="block text-sm font-semibold text-slate-900 mb-2">Nama Lengkap *</label>
-        <input type="text" required class="form-input" placeholder="Masukkan nama lengkap Anda">
-      </div>
-
-      <div>
-        <label class="block text-sm font-semibold text-slate-900 mb-2">Email *</label>
-        <input type="email" required class="form-input" placeholder="nama@email.com">
-      </div>
-
-      <div>
-        <label class="block text-sm font-semibold text-slate-900 mb-2">No. Telepon *</label>
-        <input type="tel" required class="form-input" placeholder="08xx-xxxx-xxxx">
-      </div>
-
-      <div>
-        <label class="block text-sm font-semibold text-slate-900 mb-2">Nomor Induk Siswa/Mahasiswa *</label>
-        <input type="text" required class="form-input" placeholder="Contoh: 2023/12345 atau 12345678">
-        <p class="text-xs text-slate-600 mt-1">Nomor dari kartu pelajar atau NIM universitas Anda</p>
-      </div>
-
-      <div>
-        <label class="block text-sm font-semibold text-slate-900 mb-2">Nama Institusi *</label>
-        <input type="text" required class="form-input" placeholder="SMA / Universitas">
-      </div>
-
-      <div>
-        <label class="block text-sm font-semibold text-slate-900 mb-2">Unggah Kartu Pelajar / KTM *</label>
-        <input type="file" required accept="image/*,.pdf" class="form-input">
-        <p class="text-xs text-slate-600 mt-1">JPG, PNG, atau PDF (max 5MB)</p>
-      </div>
-
-      <button type="submit" class="w-full py-3 rounded-xl btn-primary font-semibold text-sm transition-all flex items-center justify-center gap-2">
-        <i class="fa-solid fa-check"></i> Verifikasi & Lanjut Pembayaran
-      </button>
-    </form>
-
-    <p class="text-xs text-slate-600 text-center mt-4">Data Anda aman dan hanya digunakan untuk verifikasi student discount</p>
-  </div>
-</div>
-
-<!-- MODAL BEASISWA -->
-<div id="beasiswaModal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-backdrop p-4">
-  <div class="bg-white rounded-3xl w-full max-w-2xl modal-content card-shadow border border-slate-100 overflow-y-auto max-h-[90vh] p-8">
-    <button onclick="closeAllModals()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center transition-colors z-10">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-
-    <div class="mb-6">
-      <h3 class="font-bold text-3xl display text-slate-900 mb-2">Pendaftaran Beasiswa Rp 25 Juta</h3>
-      <p class="text-slate-600">Kesempatan emas untuk mendapatkan beasiswa penuh hingga Rp 25.000.000 plus mentoring dari profesional industri.</p>
-    </div>
-
-    <form id="beasiswaForm" onsubmit="handleBeasiswaSubmit(event)" class="space-y-6">
-      <!-- INFO PRIBADI -->
-      <div class="border-b border-slate-200 pb-6">
-        <h4 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">1</span>
-          Data Pribadi
-        </h4>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <input type="text" required class="form-input" placeholder="Nama Lengkap">
-          <input type="email" required class="form-input" placeholder="Email">
-          <input type="tel" required class="form-input" placeholder="No. Telepon">
-          <input type="text" required class="form-input" placeholder="Asal Kota/Kabupaten">
-        </div>
-      </div>
-
-      <!-- INFO PENDIDIKAN -->
-      <div class="border-b border-slate-200 pb-6">
-        <h4 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-sm font-bold">2</span>
-          Pendidikan & Institusi
-        </h4>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <select required class="form-input">
-            <option value="">Pilih Jenjang Pendidikan</option>
-            <option value="sma">SMA / SMK</option>
-            <option value="diploma">Diploma (D3)</option>
-            <option value="sarjana">Sarjana (S1)</option>
-            <option value="pascasarjana">Pascasarjana (S2/S3)</option>
-          </select>
-          <input type="text" required class="form-input" placeholder="Nama Institusi">
-          <input type="text" required class="form-input" placeholder="Program Studi / Jurusan">
-          <input type="text" required class="form-input" placeholder="Nomor Induk Siswa/Mahasiswa">
-        </div>
-      </div>
-
-      <!-- PORTOFOLIO -->
-      <div class="border-b border-slate-200 pb-6">
-        <h4 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-bold">3</span>
-          Portofolio Desain
-        </h4>
-        <div class="space-y-4">
-          <div>
-            <label class="block text-sm font-semibold text-slate-900 mb-2">Link Portofolio / Portfolio Website *</label>
-            <input type="url" required class="form-input" placeholder="https://portofolio.com">
-            <p class="text-xs text-slate-600 mt-1">Behance, Dribbble, Website pribadi, atau sejenisnya</p>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-slate-900 mb-2">Upload Karya Terbaik (ZIP / Link) *</label>
-            <input type="file" required class="form-input" accept=".zip,.rar">
-            <p class="text-xs text-slate-600 mt-1">File boleh dalam format ZIP (max 50MB)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ESAI MOTIVASI -->
-      <div class="border-b border-slate-200 pb-6">
-        <h4 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
-          <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold">4</span>
-          Esai Motivasi
-        </h4>
-        <div>
-          <label class="block text-sm font-semibold text-slate-900 mb-2">Mengapa Anda Layak Mendapatkan Beasiswa? *</label>
-          <textarea required class="form-input" rows="5" placeholder="Jelaskan motivasi, pencapaian, dan rencana Anda di bidang desain kreatif (min. 300 karakter)"></textarea>
-          <p class="text-xs text-slate-600 mt-1">Minimal 300 karakter | Esai yang jujur dan autentik lebih dihargai</p>
-        </div>
-      </div>
-
-      <!-- CHECKBOX PERSETUJUAN -->
-      <div class="flex items-start gap-3">
-        <input type="checkbox" required id="agreeTerms" class="mt-1">
-        <label for="agreeTerms" class="text-sm text-slate-700">
-          Saya setuju dengan syarat & ketentuan program beasiswa dan bersedia menjadi ambassador License Creative jika terpilih
-        </label>
-      </div>
-
-      <button type="submit" class="w-full py-3 rounded-xl btn-primary font-semibold text-sm transition-all flex items-center justify-center gap-2">
-        <i class="fa-solid fa-paper-plane"></i> Kirim Aplikasi Beasiswa
-      </button>
-    </form>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-16">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-8">
-    <div>
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm">LC</div>
-        <span class="text-white font-bold text-lg display">License Creative</span>
-      </div>
-      <p class="text-sm leading-relaxed">Platform lengkap untuk mendapatkan lisensi software legal, belajar dari profesional, dan akses beasiswa pendidikan desain.</p>
-    </div>
-    <div>
-      <p class="text-white font-semibold text-sm mb-4">Kontak</p>
-      <p class="text-sm flex items-center gap-2.5 mb-2"><i class="fa-solid fa-envelope text-blue-500"></i> halo@licensecreative.id</p>
-      <p class="text-sm flex items-center gap-2.5"><i class="fa-brands fa-whatsapp text-emerald-500"></i> +62 812-3456-7890</p>
-    </div>
-    <div>
-      <p class="text-white font-semibold text-sm mb-4">Menu</p>
-      <ul class="text-sm space-y-2.5">
-        <li><a href="#katalog" class="hover:text-white transition-colors">Katalog Software</a></li>
-        <li><a href="#learning" class="hover:text-white transition-colors">Learning Platform</a></li>
-        <li><a href="#beasiswa" class="hover:text-white transition-colors">Beasiswa Kreatif</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="text-white font-semibold text-sm mb-4">Pembayaran</p>
-      <div class="flex gap-2 flex-wrap">
-        <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs font-semibold flex items-center gap-2">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </span>
-        <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs font-semibold flex items-center gap-2">
-          <i class="fa-brands fa-telegram"></i> Telegram
-        </span>
-        <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs font-semibold flex items-center gap-2">
-          <i class="fa-solid fa-qrcode"></i> QRIS
-        </span>
-      </div>
-    </div>
-  </div>
-  <div class="border-t border-slate-800/80 pt-6 text-center text-xs text-slate-500 max-w-7xl mx-auto px-6 lg:px-8">
-    © 2026 License Creative. Seluruh hak cipta dilindungi undang-undang. | <a href="#" class="hover:text-slate-300">Privacy Policy</a> | <a href="#" class="hover:text-slate-300">Terms of Service</a>
-  </div>
-</footer>
-
-<script>
-  // DATA PRODUK
-  const products = [
-    {
-      id: 1,
-      name: "Adobe Illustrator",
-      icon: '<i class="fa-solid fa-bezier-curve"></i>',
-      iconBg: "bg-orange-50 text-orange-600",
-      desc: "Solusi standar industri untuk vektor, logo, dan ilustrasi digital berbasis cloud.",
-      studentPrice: "Rp 99.000",
-      creatorPrice: "Rp 149.000",
-      period: "1 Bulan Subscription"
-    },
-    {
-      id: 2,
-      name: "Adobe Photoshop",
-      icon: '<i class="fa-solid fa-image"></i>',
-      iconBg: "bg-blue-50 text-blue-600",
-      desc: "Aplikasi pengeditan foto dan manipulasi gambar tercanggih dengan AI Firefly.",
-      studentPrice: "Rp 99.000",
-      creatorPrice: "Rp 149.000",
-      period: "1 Bulan Subscription"
-    },
-    {
-      id: 3,
-      name: "Adobe Premiere Pro",
-      icon: '<i class="fa-solid fa-film"></i>',
-      iconBg: "bg-purple-50 text-purple-600",
-      desc: "Software editing video profesional untuk konten creator dan sinema digital.",
-      studentPrice: "Rp 109.000",
-      creatorPrice: "Rp 159.000",
-      period: "1 Bulan Subscription"
-    },
-    {
-      id: 4,
-      name: "Adobe Creative Cloud",
-      icon: '<i class="fa-solid fa-cloud"></i>',
-      iconBg: "bg-red-50 text-red-600",
-      desc: "Akses penuh 20+ aplikasi kreatif termasuk After Effects, InDesign, Lightroom.",
-      studentPrice: "Rp 249.000",
-      creatorPrice: "Rp 349.000",
-      period: "1 Bulan Subscription",
-      badge: "Paket Hemat"
-    },
-    {
-      id: 5,
-      name: "Windows Pro OEM",
-      icon: '<i class="fa-brands fa-windows"></i>',
-      iconBg: "bg-cyan-50 text-cyan-600",
-      desc: "Sistem operasi stabil dan aman untuk workstation kerja harian profesional.",
-      studentPrice: "Rp 99.000",
-      creatorPrice: "Rp 129.000",
-      period: "Lifetime License"
-    },
-    {
-      id: 6,
-      name: "Figma Professional",
-      icon: '<i class="fa-solid fa-layout"></i>',
-      iconBg: "bg-pink-50 text-pink-600",
-      desc: "Platform desain UI/UX kolaboratif real-time untuk tim dan individuals.",
-      studentPrice: "Rp 79.000",
-      creatorPrice: "Rp 119.000",
-      period: "1 Bulan Subscription"
-    }
-  ];
-
-  // LOAD PRODUK KE GRID
-  function loadProducts(type = 'student') {
-    const grid = document.getElementById('productGrid');
-    grid.innerHTML = products.map(p => `
-      <div class="bg-white border border-[var(--border)] rounded-2xl p-6 flex flex-col justify-between card-shadow product-card transition-all cursor-pointer hover:border-blue-200" onclick="openProductModal('${p.id}')">
-        <div>
-          <div class="w-12 h-12 rounded-xl ${p.iconBg} flex items-center justify-center text-xl font-bold mb-4">
-            ${p.icon}
-          </div>
-          ${p.badge ? `<div class="inline-block px-2.5 py-0.5 rounded-md ${p.badge === 'Paket Hemat' ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-600'} text-xs font-medium mb-2">${p.badge}</div>` : ''}
-          <h3 class="font-bold text-lg display text-slate-900">${p.name}</h3>
-          <p class="text-sm text-[var(--text-muted)] mt-1.5 leading-relaxed">${p.desc}</p>
-        </div>
-        <div class="mt-6 pt-6 border-t border-slate-100 flex items-center justify-between">
-          <div>
-            <span class="text-xs text-[var(--text-muted)] block mb-1">Harga ${type === 'student' ? 'Student' : 'Creator'}</span>
-            <span class="font-bold text-lg display text-slate-900">${type === 'student' ? p.studentPrice : p.creatorPrice}</span>
-          </div>
-          <button class="px-4 py-2.5 rounded-xl btn-primary text-sm font-semibold transition-all shadow-sm">Pilih</button>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  // PRICING TOGGLE
-  document.querySelectorAll('.pricing-toggle').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.pricing-toggle').forEach(b => b.classList.remove('active', 'bg-white', 'shadow-sm', 'border-slate-200'));
-      this.classList.add('active', 'bg-white', 'shadow-sm', 'border-slate-200');
-      loadProducts(this.dataset.type);
-    });
-  });
-
-  // MODAL FUNCTIONS
-  function openProductModal(productId) {
-    const product = products.find(p => p.id == productId);
-    if (!product) return;
-
-    document.getElementById('modalProductIcon').innerHTML = `<div class="w-12 h-12 rounded-xl ${product.iconBg} flex items-center justify-center text-xl">${product.icon}</div>`;
-    document.getElementById('modalProductName').textContent = product.name;
-    document.getElementById('modalProductDesc').textContent = product.desc;
-    document.getElementById('modalStudentPrice').textContent = product.studentPrice;
-    document.getElementById('modalCreatorPrice').textContent = product.creatorPrice;
-
-    document.getElementById('productModal').classList.remove('hidden');
-    document.getElementById('productModal').classList.add('flex');
-    
-    // Reset buyer type, then explicitly select Student by default.
-    document.querySelectorAll('#productModal .user-type-btn').forEach(btn => {
-      btn.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-700');
-      btn.classList.add('border-slate-200', 'text-slate-900');
-      btn.setAttribute('aria-pressed', 'false');
-    });
-    selectUserType('student');
-  }
-
-  function closeProductModal() {
-    document.getElementById('productModal').classList.add('hidden');
-    document.getElementById('productModal').classList.remove('flex');
-  }
-
-  function selectUserType(type) {
-    // Scope the selector to the buyer-type buttons only.
-    // Previously [data-type="..."] could select the pricing toggle
-    // outside the modal because it also uses data-type.
-    document.querySelectorAll('#productModal .user-type-btn').forEach(btn => {
-      btn.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-700');
-      btn.classList.add('border-slate-200', 'text-slate-900');
-      btn.setAttribute('aria-pressed', 'false');
-    });
-
-    const selected = document.querySelector(`#productModal .user-type-btn[data-type="${type}"]`);
-    if (!selected) return;
-
-    selected.classList.remove('border-slate-200', 'text-slate-900');
-    selected.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-700');
-    selected.setAttribute('aria-pressed', 'true');
-
-    // Keep the selected type available for payment actions.
-    document.getElementById('productModal').dataset.userType = type;
-  }
-
-  function proceedPayment(method) {
-    const userType = document.querySelector('#productModal .user-type-btn.border-blue-600');
-    if (!userType) {
-      alert('Pilih tipe pembeli terlebih dahulu');
-      return;
-    }
-
-    const type = userType.dataset.type;
-
-    if (type === 'student') {
-      closeProductModal();
-      document.getElementById('studentVerificationModal').classList.remove('hidden');
-      document.getElementById('studentVerificationModal').classList.add('flex');
-    } else {
-      // Direct payment untuk creator
-      handleCreatorPayment(method);
-    }
-  }
-
-  function handleStudentSubmit(e) {
-    e.preventDefault();
-    alert('Data student terverifikasi! Anda akan dialihkan ke WhatsApp untuk konfirmasi pembayaran.');
-    closeAllModals();
-    // Redirect to WhatsApp
-    window.open('https://wa.me/628123456789?text=Halo%20saya%20ingin%20membeli%20lisensi%20dengan%20harga%20student', '_blank');
-  }
-
-  function handleCreatorPayment(method) {
-    const message = 'Saya ingin membeli lisensi software License Creative untuk Creator';
-    const whatsappUrl = `https://wa.me/628123456789?text=${encodeURIComponent(message)}`;
-    const telegramUrl = `https://t.me/licensecreative?start=purchase`;
-
-    if (method === 'whatsapp') {
-      window.open(whatsappUrl, '_blank');
-    } else if (method === 'telegram') {
-      window.open(telegramUrl, '_blank');
-    }
-    closeAllModals();
-  }
-
-  function openBeasiswaModal() {
-    document.getElementById('beasiswaModal').classList.remove('hidden');
-    document.getElementById('beasiswaModal').classList.add('flex');
-  }
-
-  function handleBeasiswaSubmit(e) {
-    e.preventDefault();
-    alert('Aplikasi beasiswa Anda telah dikirim! Kami akan menghubungi Anda dalam 5-7 hari kerja. Terima kasih sudah berpartisipasi!');
-    closeAllModals();
-  }
-
-  function closeAllModals() {
-    document.getElementById('productModal').classList.add('hidden');
-    document.getElementById('productModal').classList.remove('flex');
-    document.getElementById('studentVerificationModal').classList.add('hidden');
-    document.getElementById('studentVerificationModal').classList.remove('flex');
-    document.getElementById('beasiswaModal').classList.add('hidden');
-    document.getElementById('beasiswaModal').classList.remove('flex');
-  }
-
-  // CLOSE MODAL KETIKA CLICK BACKDROP
-  document.getElementById('productModal').addEventListener('click', (e) => {
-    if (e.target.id === 'productModal') closeProductModal();
-  });
-
-  document.getElementById('studentVerificationModal').addEventListener('click', (e) => {
-    if (e.target.id === 'studentVerificationModal') closeAllModals();
-  });
-
-  document.getElementById('beasiswaModal').addEventListener('click', (e) => {
-    if (e.target.id === 'beasiswaModal') closeAllModals();
-  });
-
-  // LOAD INITIAL PRODUCTS
-  loadProducts('student');
-
-  // MOBILE MENU
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.createElement('div');
-  mobileMenu.id = 'mobileMenu';
-  mobileMenu.className = 'hidden fixed top-16 left-0 right-0 z-30 bg-white border-b border-slate-200 shadow-lg md:hidden';
-  mobileMenu.innerHTML = `
-    <div class="p-4 space-y-1">
-      <a href="#katalog" class="block px-4 py-3 rounded-xl font-semibold text-sm text-slate-700 hover:bg-slate-50">Katalog Software</a>
-      <a href="#learning" class="block px-4 py-3 rounded-xl font-semibold text-sm text-slate-700 hover:bg-slate-50">Learning Platform</a>
-      <a href="#beasiswa" class="block px-4 py-3 rounded-xl font-semibold text-sm text-slate-700 hover:bg-slate-50">Beasiswa Kreatif</a>
-      <a href="#katalog" class="block px-4 py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm text-center">Beli Lisensi</a>
-    </div>
-  `;
-  document.body.appendChild(mobileMenu);
-
-  menuBtn.addEventListener('click', () => {
-    const isHidden = mobileMenu.classList.contains('hidden');
-    mobileMenu.classList.toggle('hidden');
-    menuBtn.innerHTML = isHidden
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-    });
-  });
-
-  // ESC KEY UNTUK CLOSE MODAL
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAllModals();
-  });
-</script>
-
-</body>
-</html>
+        <div cla
